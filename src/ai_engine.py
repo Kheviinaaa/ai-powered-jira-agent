@@ -11,7 +11,8 @@ import os, json                # os for environment variables, json for data for
 # ---------------------------------------------------------
 # 1. Create a client connection to OpenAI using the environment variable key
 # ---------------------------------------------------------
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = None  # Disable API for mock mode
 
 # ---------------------------------------------------------
 # 2. Define the prompt template the AI will receive
@@ -160,16 +161,31 @@ def post_process(all_outputs):
     return cleaned
 
 # ---------------------------------------------------------
+# Simulated Jira Integration (for demo)
+# ---------------------------------------------------------
+def fetch_epics_from_jira(project_key="ECOM"):
+    """
+    Simulated Jira fetch function for demonstration.
+    In a real system, this would use Jira's REST API to retrieve epics.
+    """
+    print(f"🔹 Simulated Jira fetch for project: {project_key}")
+    epics = [
+        {"title": "E-Commerce Checkout System",
+         "description": "Build checkout flow with payment gateway."},
+        {"title": "User Authentication",
+         "description": "Add secure login and signup functionality."},
+        {"title": "Order Management",
+         "description": "Enable users to view and manage their orders."}
+    ]
+    return epics
+
+# ---------------------------------------------------------
 # 7. Main Program: handles multi-epic batching,
 #    post-processing, and validation.
 # ---------------------------------------------------------
 if __name__ == "__main__":
     # a) Define multiple epics for batch processing
-    epics = [
-        {"title": "E-Commerce Checkout System", "description": "Build an E-Commerce Checkout System"},
-        {"title": "Secure Payment Feature", "description": "Enhance payment gateway security and validation."},
-        {"title": "Order Management Module", "description": "Allow users to view and manage completed orders."}
-    ]
+    epics = fetch_epics_from_jira("ECOM")
 
     all_outputs = []
 
