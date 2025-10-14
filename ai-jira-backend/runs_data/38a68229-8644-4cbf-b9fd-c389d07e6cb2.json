@@ -1,0 +1,26 @@
+{
+  "run_id": "38a68229-8644-4cbf-b9fd-c389d07e6cb2",
+  "generated_at": "2025-10-14T13:32:02.594730Z",
+  "output": {
+    "epics": [
+      {
+        "epic_id": "EPC-001",
+        "title": "Checkout",
+        "stories": [
+          {
+            "story_id": "US-01",
+            "title": "Checkout - Story 1",
+            "test_cases": [
+              {
+                "id": "TC-01",
+                "preconditions": "None",
+                "steps": "Step 1",
+                "expected_result": "Expected"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
