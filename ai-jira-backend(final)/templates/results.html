@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <h2>Results: {{ run.run_id }}</h2>
+    <a href="/runs/{{ run.run_id }}/csv" class="btn">Download CSV</a>
+    <a href="/" class="btn">Generate New</a>
+</div>
+
+{% for epic in run.output.epics %}
+<div class="card">
+    <h3>🎯 Epic: {{ epic.title }}</h3>
+    <p><strong>ID:</strong> {{ epic.epic_id }}</p>
+    
+    <h4>User Stories:</h4>
+    {% for story in epic.stories %}
+    <div style="background: #e7f3ff; padding: 15px; margin: 10px 0; border-radius: 5px;">
+        <h5>📖 {{ story.title }}</h5>
+        <p><strong>Story ID:</strong> {{ story.story_id }}</p>
+        
+        <h6>Test Cases:</h6>
+        {% for test_case in story.test_cases %}
+        <div style="background: white; padding: 10px; margin: 5px 0; border-radius: 3px;">
+            <strong>🧪 {{ test_case.id }}</strong>
+            <p><strong>Steps:</strong> {{ test_case.steps }}</p>
+            <p><strong>Expected:</strong> {{ test_case.expected_result }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+
+<!-- Table View -->
+<div class="card">
+    <h3>📊 Data Table</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Epic ID</th>
+                <th>Story ID</th>
+                <th>Story Title</th>
+                <th>Test ID</th>
+                <th>Steps</th>
+                <th>Expected Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for epic in run.output.epics %}
+                {% for story in epic.stories %}
+                    {% for test_case in story.test_cases %}
+                    <tr>
+                        <td>{{ epic.epic_id }}</td>
+                        <td>{{ story.story_id }}</td>
+                        <td>{{ story.title }}</td>
+                        <td>{{ test_case.id }}</td>
+                        <td>{{ test_case.steps }}</td>
+                        <td>{{ test_case.expected_result }}</td>
+                    </tr>
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

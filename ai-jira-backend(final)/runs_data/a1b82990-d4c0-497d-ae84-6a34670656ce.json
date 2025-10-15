@@ -1,0 +1,1 @@
+{"run_id": "a1b82990-d4c0-497d-ae84-6a34670656ce", "project_name": "AI Jira Project", "epics": [{"epic_id": "E1", "title": "Test Epic", "description": "Test description"}], "output": {"stories": [{"epic_id": "E1", "stories": ["Story for Test Epic"], "test_cases": ["Test for Test Epic"]}]}}

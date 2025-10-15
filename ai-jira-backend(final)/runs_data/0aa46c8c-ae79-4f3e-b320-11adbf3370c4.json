@@ -1,0 +1,26 @@
+{
+  "run_id": "0aa46c8c-ae79-4f3e-b320-11adbf3370c4",
+  "generated_at": "2025-10-14T14:25:01.514190Z",
+  "output": {
+    "epics": [
+      {
+        "epic_id": "E1",
+        "title": "T",
+        "stories": [
+          {
+            "story_id": "US-01",
+            "title": "T - Story 1",
+            "test_cases": [
+              {
+                "id": "TC-01",
+                "preconditions": "None",
+                "steps": "Step 1",
+                "expected_result": "Expected"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
