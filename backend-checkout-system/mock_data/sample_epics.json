@@ -1,0 +1,14 @@
+{
+  "epics": [
+    {
+      "epic_id": "EPC-001",
+      "title": "Checkout Process Implementation",
+      "description": "Implement complete checkout flow including cart, payment, and order confirmation"
+    },
+    {
+      "epic_id": "EPC-002", 
+      "title": "Payment Gateway Integration",
+      "description": "Integrate with multiple payment providers and handle transaction processing"
+    }
+  ]
+}
