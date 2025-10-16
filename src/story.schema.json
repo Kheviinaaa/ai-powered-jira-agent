@@ -10,9 +10,9 @@
         "When": { "type": "string" },
         "Then": { "type": "string" }
       },
-      "required": ["Given", "When", "Then"]
+      "required": [ "Given", "When", "Then" ]
     },
     "story_points": { "type": "number" }
   },
-  "required": ["title", "description", "acceptance_criteria", "story_points"]
+  "required": [ "title", "description", "acceptance_criteria", "story_points" ]
 }
