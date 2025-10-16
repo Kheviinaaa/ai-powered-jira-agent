@@ -205,8 +205,8 @@ if __name__ == "__main__":
         validation_results.append({"Epic": epic_data.get("Epic"), "Valid": ok})
 
     # d) Save all outputs and validation summary
-    os.makedirs("out", exist_ok=True)  # ✅ create folder if missing
-    with open("out/sample_output.json", "w") as f:
+    os.makedirs("src/out", exist_ok=True)  # ✅ create folder if missing
+    with open("src/out/sample_output.json", "w") as f:
         json.dump(cleaned_outputs, f, indent=2)
 
     with open("out/validation_report.json", "w") as f:
@@ -214,3 +214,4 @@ if __name__ == "__main__":
 
     print(" Post-processing complete. Validation results saved to validation_report.json.")
     print(" All epics processed successfully! Output saved to sample_output.json.")
+
