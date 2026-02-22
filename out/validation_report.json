@@ -1,0 +1,14 @@
+[
+  {
+    "Epic": "Build an E-Commerce Checkout System",
+    "Valid": true
+  },
+  {
+    "Epic": "Enhance payment gateway security and validation.",
+    "Valid": true
+  },
+  {
+    "Epic": "Allow users to view and manage completed orders.",
+    "Valid": true
+  }
+]

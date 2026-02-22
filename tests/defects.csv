@@ -1,0 +1,11 @@
+ID,Title,Steps,Expected,Actual,Severity,Owner,Status,Fix_Commit,Retest_Result
+DEF-001,AI output fails schema validation,"1. POST /generate with test/data/checkout_epic.json",JSON validates against schema,Schema validation fails: missing story_points in story US-02,Blocker,AI Team,Open,,
+DEF-002,High-risk stories have <3 test cases,"1. Generate from payment epic 2. Check high-risk stories",All high-risk stories have ≥3 tests,Payment story (US-02) has only 2 tests,Critical,AI Team,In Progress,,
+DEF-003,CSV export missing story context,"1. Generate stories 2. Export CSV 3. Check columns",All columns populated,story_points and risk_level columns empty in CSV export,Major,Backend Team,Open,,
+DEF-004,Typo in Jira auth error message,"1. Trigger Jira auth error with invalid token",Professional error message,"Error shows 'JIRA_AUTH_FALLED' instead of 'JIRA_AUTH_FAILED'",Minor,Backend Team,Open,,
+DEF-005,Duplicate story IDs generated,"1. Generate stories from large epic 2. Check IDs",All story IDs are unique,Stories US-05 and US-08 both have ID ""US-05"",Critical,AI Team,Open,,
+DEF-006,Export endpoint returns 500 for invalid run ID,"1. Call /runs/invalid-id/json",Appropriate 404 error,Returns 500 internal server error,Major,Backend Team,Open,,
+DEF-007,Story points outside Fibonacci sequence,"1. Generate stories 2. Check story_points values",All story_points in {1,2,3,5,8,13},Story has story_points: 4,Minor,AI Team,Open,,
+DEF-008,Missing acceptance criteria triplets,"1. Generate stories 2. Check acceptance_criteria",All stories have ≥1 Given/When/Then,Story US-03 has empty acceptance_criteria array,Major,AI Team,Open,,
+DEF-009,UI form doesn't show constraints,"1. Load web UI 2. Check form display",Form shows story/test constraints (3-5 stories, 2-3 tests),No constraint information displayed,Minor,Frontend Team,Open,,
+DEF-010,Performance: 3 epics take >30 seconds,"1. Time generation of 3 epics",Complete within 30 seconds,Takes 45 seconds for 3 epics,Major,AI Team,Open,,

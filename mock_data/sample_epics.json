@@ -1,0 +1,5 @@
+[
+  { "title": "E-Commerce Checkout System", "description": "Build an E-Commerce Checkout System" },
+  { "title": "Secure Payment Feature", "description": "Ensure payment gateway security and validation" },
+  { "title": "Order Management Module", "description": "Allow admins to view and manage completed orders" }
+]
